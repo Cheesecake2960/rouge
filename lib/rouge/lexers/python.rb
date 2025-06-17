@@ -116,6 +116,8 @@ module Rouge
           push :classname
         end
 
+        rule %r/(match|case)\b/, Keyword
+
         rule %r/([a-z_]\w*)[ \t]*(?=(\(.*\)))/m, Name::Function
         rule %r/([A-Z_]\w*)[ \t]*(?=(\(.*\)))/m, Name::Class
 
